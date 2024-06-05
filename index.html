@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<title>
+  test page
+</title>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="./css/main.css" type="text/css">
+  <script src="./js/main.js"></script>
+</head>
+<body id=bodyContainer>
+  <div id="mainContainer">
+    <audio id="audioContainer" src="./media/ring10.wav" controls preload="metadata"></audio>
+  </div>
+  <canvas id="canvas" width="0" hidden="" height="0"></canvas>
+  <div style="position:fixed;left:9999px;opacity:0;">
+    <div class="bgCamOn"></div>
+    <div class="bgMicOn"></div>
+  </div>
+  <script>
+    init();
+  </script>
+</body>
+</html>

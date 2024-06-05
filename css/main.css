@@ -1,0 +1,215 @@
+/* 
+svg редактор онлайн:
+https://devfix.ru/app/editor-svg/
+конвертор "hex color" в "css filter" онлайн:
+https://isotropic.co/tool/hex-color-to-css-filter/
+*/
+
+:root {
+ --filterNormal: invert(100%) sepia(15%) saturate(409%) hue-rotate(292deg) brightness(88%) contrast(80%);
+ --filterHover: invert(79%) sepia(27%) saturate(5141%) hue-rotate(348deg) brightness(101%) contrast(101%);
+ --filterSubjOn: invert(25%) sepia(78%) saturate(4366%) hue-rotate(350deg) brightness(87%) contrast(138%);
+}
+
+html, body { height: 95% }
+
+body {
+ margin: 20px;
+ background: #eee;
+ font-family: Segoe UI, Tahoma, Sans-Serif;
+}
+
+#mainContainer {
+ position: relative;
+ display: block;
+ outline: none;
+ vertical-align: middle;
+ min-width: 640px; 
+ width: 640px; 
+ min-height: 480px;
+ height: 90%;
+ color: #555;
+ margin: 0 auto;
+}
+
+.showButtons:hover #buttonBarContainer{
+ opacity: 1;
+}
+
+#videoContainer {
+ display: inline-block;
+ outline: none;
+ background: #000;
+ background-size: cover;
+ width: 100%; 
+ height: 100%;
+ border-radius: inherit;
+}
+
+.videoMirror {
+ transform: rotateY(180deg);
+ -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+ -moz-transform:rotateY(180deg); /* Firefox */
+}
+
+.defBS {
+ display: block;
+ vertical-align: middle;
+ min-height: 38px;
+ max-height: 38px;
+ height: 38px;
+ margin: 5px;
+ float: right;
+ /*
+ border: 1px solid #ccc;
+ */
+ color: #ccc;
+ font-size: 14px;
+ cursor: pointer;
+ -webkit-appearance: none;
+-moz-appearance: none;
+ appearance: none;
+ -webkit-touch-callout: none;
+ -webkit-user-select: none;
+ -khtml-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+}
+
+.defSource {
+ background: transparent;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+ text-align: left;
+ padding-left: 5px;
+ padding-right: 5px;
+ width: 150px;
+ max-width: 150px;
+}
+
+select option {
+ background: #fff !important;
+ color: #333;
+}
+
+.defButton {
+ width: 38px;
+ min-width: 38px;
+ text-align: center;
+}
+
+.defButton:hover, .defSource:hover {
+ border-color: #ffa812;
+ color: #ffa812;
+}
+
+#buttonBarContainer {
+ position: absolute;
+ width: 100%;
+ max-width: 100%;
+ background: rgba(0,0,0,0.7);
+/*
+ opacity: 0;
+*/
+ z-index: 100;
+}
+
+#buttonBarContainer:hover {
+ opacity: 1;
+}
+
+#buttonBar {
+ max-width: 100%;
+ padding: 10px;
+ float: right;
+}
+
+.defButtonBar {
+ display: inline-block;
+}
+
+#audioContainer {
+ width: 100%;
+ max-width: 100%;
+/* background: rgba(0,0,0,1); */
+}
+
+#audioMicContainer {
+ display: none;
+}
+
+.bgCamOff {
+ background: url("../img/svgCamOff.svg") no-repeat center/24px;
+ filter: var(--filterNormal);
+}
+
+.bgCamOff:hover {
+ filter: var(--filterHover);
+}
+
+.bgCamOn {
+ background: url("../img/svgCamOn.svg") no-repeat center/24px;
+ filter: var(--filterSubjOn);
+}
+
+.bgMicOff {
+ background: url("../img/svgMicOff.svg") no-repeat center/24px;
+ filter: var(--filterNormal);
+}
+
+.bgMicOff:hover {
+ filter: var(--filterHover);
+}
+
+.bgMicOn {
+ background: url("../img/svgMicOn.svg") no-repeat center/24px;
+ filter: var(--filterSubjOn);
+}
+
+.bgCamRotate {
+ background: url("../img/svgCamRotate.svg") no-repeat center/24px;
+ filter: var(--filterNormal);
+}
+
+.bgCamRotateOn {
+ background: url("../img/svgCamRotate.svg") no-repeat center/24px;
+ filter: var(--filterSubjOn);
+/*
+ filter: var(--filterNormal);
+ transform:rotateY(180deg);
+ -webkit-transform:rotateY(180deg);
+*/
+}
+
+.bgCamRotate:hover {
+ filter: var(--filterHover);
+}
+
+.bgToggleScreenOn {
+ background: url("../img/svgToggleScreenOn.svg") no-repeat center/24px;
+ filter: var(--filterNormal);
+}
+
+.bgToggleScreenOn:hover {
+ filter: var(--filterHover);
+}
+
+.bgToggleScreenOff {
+ background: url("../img/svgToggleScreenOff.svg") no-repeat center/24px;
+ filter: var(--filterNormal);
+}
+
+.bgToggleScreenOff:hover {
+ filter: var(--filterHover);
+}
+
+.bgTakeSnapshot {
+ background: url("../img/svgTakeSnapshot.svg") no-repeat center/24px;
+ filter: var(--filterNormal);
+}
+
+.bgTakeSnapshot:hover {
+ filter: var(--filterHover);
+}
+
